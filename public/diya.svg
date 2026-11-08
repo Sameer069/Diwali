@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="flame" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:0.8" />
+    </radialGradient>
+    <linearGradient id="diya-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CD7F32;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Diya base -->
+  <ellipse cx="50" cy="70" rx="35" ry="15" fill="url(#diya-gradient)" />
+  <path d="M 15,70 Q 15,85 50,85 Q 85,85 85,70" fill="url(#diya-gradient)" />
+  
+  <!-- Wick -->
+  <rect x="48" y="55" width="4" height="15" fill="#8B4513" rx="2" />
+  
+  <!-- Flame -->
+  <ellipse cx="50" cy="45" rx="12" ry="18" fill="url(#flame)" opacity="0.9">
+    <animate attributeName="ry" values="18;20;18" dur="1.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="1.5s" repeatCount="indefinite" />
+  </ellipse>
+  
+  <!-- Inner flame -->
+  <ellipse cx="50" cy="47" rx="6" ry="12" fill="#FFFF00" opacity="0.8">
+    <animate attributeName="ry" values="12;14;12" dur="1.2s" repeatCount="indefinite" />
+  </ellipse>
+</svg>
